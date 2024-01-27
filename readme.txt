@@ -142,7 +142,7 @@ e# describes a tetration of 10 (as hyper e notation)
  19000  novendecinillion     1e+57003  10^57003
  20000  vigintinillion       1e+60003  10^60003
 ======  ===================  ========  ========
-
+*Note that the leftmost "illi" is dropped after the nonillinillion
 
       One Millinillion to One Centinillion
 
@@ -263,12 +263,27 @@ I would like to note that I chose prefixes that were distinct and familiar over 
 
 That is a word I made up... that's it. Why did I do that? Well, it benefits this project to extend this system to absurd proportions, and I did not feel like waiting thirty years for new metric prefixes to develop.
 
+alpha   10^48   alphecto   10^(-48)
+kyoda   10^45   kyodecto   10^(-45)
+wechsla 10^42   wechslo    10^(-42)
+conwa   10^39   conwo      10^(-39) 
+ortensa 10^36   ortenso    10^(-36)
+jana    10^33   janecto    10^(-33)
+quetta  10^30   quecto     10^(-30)
+
 I did not invent an arbitrary number of prefixes, but I needed prefixes up to 10^48 because that is the sqaure of "yotta". Otherwise, names just get flooded with repeated "yotta"s. So, I decided to just make up prefixes until I filled the gap to 10^48. What happens at 10^48? Well...
 
 
 -Greek Alphabetic Prefixes and Wow Numbers-
 
-10^48 is called "alpha". "beta" is the square of alpha. "gamma" is the square of "beta". Upon exhausting the entire Greek alphabet (after omega), we reach "wowalpha" and "wowomega" soon after. Then, "wowomega" is followed by "diwowalpha" such that the "wow"s ultimately start compounding. One can imagine a number named "milli[some long string contiguous 'wowomega's]nillion, describing some arbitrarily large number. (Why "wow"? It was easier to distinguish than "wau" in a long string!)
+10^48 is called "alpha". "beta" is the square of alpha. "gamma" is the square of "beta". Upon exhausting the entire Greek alphabet (after omega), we reach "wowalpha" and "wowomega" soon after. Then, "wowomega" is followed by "diwowalpha" such that the "wow"s ultimately start compounding. One can imagine a number named "milli[some long string contiguous 'wowomega's]nillion, describing some arbitrarily large number. 
+
+  *Why "wow"? It was easier to distinguish than "wau" in a long string!
+
+  *Please note the prefixes denoting values less than 10 are not used to generate names.
+  That said, you are free to extrapolate: "becto", "gammecto" "decto", "epsilecto"...
+  dropping the last vowel from the corresponding prefix and concatenating "ecto" accordingly.
+  Perhaps my prefixes will be adopted by the General Conference on Weights and Measures, as a scheme for arbitrary extension. "Big Jane", and "Hortens" are from my maternal grandfather's early years. They are joined here by Conway, Wechsler, and Kyoda (Fish). 
 
 
 --Final Thoughts: (What's next?)--

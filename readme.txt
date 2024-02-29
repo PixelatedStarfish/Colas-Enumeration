@@ -6,11 +6,21 @@ Introduction
     What is Cola's Enumeration?
     Conway's illion Converter and the Conway-Weschler System
 How Does Cola's Enumeration Work?
-Going Even Further Beyond: Polymetric Combinations
+    Truncation by use of Greek Numerals
+    Examples of Greek and Metric Prefixes
+    Going Even Further Beyond: Polymetric Combinations
+Program Implementation 
+    Comparing Enumerations: "So, is it any good?"
+    Limitations of this Program
+    Features
+Conclusion
+
+
 Tables of Numbers
     Short Scale Tables
     Long Scale Tables
 Change Log
+    v1.3
     v1.2
     v1.1
     v1.0
@@ -18,82 +28,166 @@ Legal
 Sources
 
 
-
 --Introduction--
 
 -What is Cola's Enumeration?-
 
-You might be wondering who Cola is. Cola is a Yorkshire Terrier, who is always ready for food, licking, and being carried. You might also be wondering what the Conway-Weschler System is, and why I felt the need to extend it. May you find this document, and it's accompanying program, to be as illuminating and enjoyable as I do.
+You might be wondering who Cola is. Cola is a Yorkshire Terrier, who is always ready for food, licking, and being carried. You might also be wondering what the Conway-Weschler System is, and why I felt the need to extend it with this enumeration. May this document answer your questions. May you find this document, and its accompanying program, to be as illuminating and enjoyable as I do.
 
-Imagine yourself with a great deal of time on your hands. The year is 2023. You need a nondescript operation and you have left your tutoring job to go on a medical leave. You pick up a new video game to pass the time. It is the kind of game with a bunch of numbers going up, the kind of game where you can click on some stuff, and go to sleep, and come back to find the numbers have gone up, and now you can spend number (yes, number) to get the mcguffin that makes the numbers go up more quickly. You contemplate strategies for making the numbers go up faster. You visit fan pages and wikis for tips and tricks, for slaying the angry number titan, so you can make the numbers go up faster. The game displays numbers with a suffix by default, (such as "6.283 Million") and as the numbers rise from millions to vigintillions, you become curious as to how the dev has named so many numbers. 
-
-You find a list of large numbers on Wikipedia, a few wikis dedicated to naming numbers, and finally Conway's illion Converter. You push it as high as it will let you, and notice the repeating "illi"s on your screen. In the interest of numeric mischief, you decide to play a numeric joke. You think to yourself "maybe I can write a fork, that names some of these illions 'gazillion' or 'jillion', like in that one episode of Futurama, where Phillip J. Fry bids 'one jillion dollars' at auction, and is met with the reply 'Sir, that's not a real number'." It would be funny if jillion was actually a real, defined number. Things like that are funny when you are on painkillers. So, you make some alterations. Funny stuff. However, the Number-Goblin-that-lives-in-your-head-now is not satisfied with this. 
-
-You remember that English has words for shapes in it. Polygons are named with ancient Greek instead of ancient Latin. You can do something with that. So you do something with that, and it becomes an enumeration that you can name after your older-brother's-college-roomate's-dog-but-sometimes-also-your-family-dog-because-your-family-is-happy-to-sit. How could anyone resist the opportunity to name something after their beloved family dog? So you decide to write the enumeration and name it after the dog. 
+"Cola's Enumeration for Naming Large Numbers: An Extension of the Conway-Wechsler System with Truncation of Contiguous Repeating Substrings" is a counting machine for naming arbitrarily large natural numbers. It is based on the Conway-Weschler System. which can also name arbitrarily large natural numbers with Latin numerals. However, in the Conway-Weschler System the length of names grows rapidly, and names are quickly populated with redundant syllables. For instance, "Millinillinillinillion" has three contiguous "nilli"s, and four "illi"s. Cola's Enumeration truncates this redundancy without loss of information.
 
 -Conway's illion Converter and the Conway-Weschler System-
 
-The Conway-Weschler System is an enumeration created by John Conway, Richard Guy, and Allan Weschler. It was initially published in "The Book of Numbers" written by Conway and Guy in 1995. It was then extended by Conway and Weschler in 1996. Conway's illion Converter is an interactive web tool which automates this enumeration, and it was created by Fish in 2021. So, what is an "illion"?An "illion" is a number with the suffix "illion", such as one million, one billion, one trillion, etc. The details of how these numbers came to be named are recounted in "Large Numbers" in the Sources. Such details will not be recounted here. Instead, I will note that the Conway-Weschler system extends this "illion" naming convention arbitrarily. 
+The Conway-Weschler System is an enumeration created by John Conway, Richard Guy, and Allan Weschler. It was initially published in "The Book of Numbers", written by Conway and Guy in 1995. It was then extended by Conway and Weschler in 1996. Conway's illion Converter, created by Fish in 2021, is a program to automate this system.
 
-Given one million (named for a thousand thousands) is considered the "first illion", one billion is the "second illion", and one trillion is the "third illion" then "illions" from the second to the 999th can be named as a portmanteau of a Latin numeral and "(m)illion". The "bi" of billion and "tri" of trillion are consistent with this convention. (See the Sources for a list of Latin numerals.) At the "thousandth illion", something needs to change. The prefix "milli" would refer to one thousand, but it is already in use by "million", so Conway, Guy, and Weschler decided on "millinillion". The next "illion", for 1001, would be millimillion. Continuing to the "two thousandth illion", we reach "billinillion". By combining a Latin numeral with the suffix "illinillion", it is possible to enumerate up to the "999,000th illion" by the same method for enumerating to the "999th illion".
+So, what is an "illion"? An "illion" is a named with the suffix "illion", in the Conway-Weschler system. These include one million, one billion, one trillion, etc. Fish refers to these numbers as "illion"s, such that "million" is the first "illion", billion is the second, trillion is the third. The Conway-Weschler system extends this "illion" naming convention arbitrarily, by employing Latin numerals in the following manner. 
+
+Given one million (named for a thousand thousands) is considered the "first illion", one billion is the "second illion", and one trillion is the "third illion" then "illions" from the second to the 999th can be named as a portmanteau of a Latin numeral and "(m)illion". The "bi" of billion and "tri" of trillion are consistent with this convention. (See the Sources for a list of Latin numerals.) At the "thousandth illion", this convention would appear to be exhausted. The prefix "milli" would refer to one thousand, but it is already in use by "million", so "millinillion" was coined to allow for further enumerating.
+
+The next "illion", for 1001, would be millimillion. Continuing to the "two thousandth illion", we reach "billinillion". By combining a Latin numeral with the suffix "illinillion", it is possible to enumerate up to the "999,000th illion" by the same method for enumerating to the "999th illion".
 
 The Conway-Weschler system use two "illi"s for the "nillions", which I find a bit verbose. Consider the "999,999th illion", which is called "novenonagintanongentilli-novenonagintanongentillion". "Novenonagintanongentilli" is already a long name, and it gets repeated in this case. What is next? The "millionth illion", which is called "millinillinillion".  Like Cerberus' three heads, this number has three "illi"s. As numbers grow higher, the "illi"s and the Latin just keep piling up, out to infinity!
 
 
 --How Does Cola's Enumeration Work?--
 
-This is an extension of the Conway-Wechsler system.
-It uses Greek numerals (for polygons) to truncate contiguous, repeated substrings in "illion" numbers, which are named with Latin numerals.
+-Truncation by use of Greek Numerals-
 
-A string composed of the contiguous repeated substring "likethis" looks like this:
+Cola's Enumeration uses Greek numerals (also used for naming polygons) to truncate contiguous, repeated substrings in "illion" numbers, which are named exclusively with Latin numerals in the Conway-Weschler system.
 
-    likethislikethislikethislikethislikethislikethis
+A string composed of the contiguous repeated substring "nilli" looks like this:
+    "nillinillinillinillinilli"
 
-Conway's illion Converter (by Fish) will produce contiguous, repeating "nilli"s  when pushed to handle extremely large inputs. Such as "millinillinillinilli..." With the addition of this polygon naming convention, names can be shortened significantly, especially at "milestone numbers" such as those listed in the tables below.
+The five "nilli"s of this substring can be truncated to "pentanillion" in Cola's Enumeration, with "penta" refering to the Greek numeral for five. Millinillinillinillinillinillion in the Conway-Weschler system is enumerated as mipentanillion in Cola's Enumeration.
 
-"millinillinillion" in the Conway-Weschler system becomes "midinillion" in Cola's Enumeration. Here, "di" means two, truncating "nillinilli" to "dinilli". "tri" truncates three "illi"s. "tetra" truncates four of them. (Also, "milli" is shortened to "mi" to reduce the number of "illi"s.)
+-Examples of Greek and Metric Prefixes-
 
-Here is a list of some of the Greek prefixes and how many "illi"s they truncate:
-    henna    - 1
-    di       - 2
-    tri      - 3
-    tetra    - 4
-    penta    - 5
-    hexa     - 6
-    hepta    - 7
-    octa     - 8
-    nona     - 9
-    deka     - 10
-    undeka   - 11
-    dodeka   - 12
-    trisdeka - 13
-    icosa    - 20
-    triconta - 30
-    hecta    - 100
-    killo    - 1000
-    mega     - 10^6
-    giga     - 10^9
-    quetta   - 10^30
+    hena      - 1
+    di        - 2
+    tri       - 3
+    tetra     - 4
+    penta     - 5
+    hexa      - 6
+    hepta     - 7
+    octa      - 8
+    nona      - 9
+    deka      - 10
+    undeka    - 11
+    dodeka    - 12
+    trisdeka  - 13
+    tetradeka - 14
+    cosa     -  20
+    triconta  - 30
+    hecta     - 100
+    killo     - 1000
+    mega      - 10^6
+    giga      - 10^9
+    tera      - 10^12
+    peta      - 10^15
+    exa       - 10^18
+    zetta     - 10^21
+    yotta     - 10^24
+    ronna     - 10^27
+    quetta    - 10^30
 
-This is not a complete list. There are tables below for that. This list is here to illustrate just how many syllables my enumeration can truncate. You can say "illi" a nonillion times, or you can say "quetta" (or you could use a powers notation, but this is more fun...). 
 
-I would like to note that I chose prefixes that were distinct and familiar over ones that were strictly accurate to ancient greek. I picked, "di" over "bi", and "killo" over "chilla". I swapped "deca" for "deka" to distinguish it from "deci". I dropped the "i" in "icosa" to avoid the doubled "i" of "miicosa". Finally, I dropped "myria" for "dekakillo" because it is easier to read and more efficient programmatically (saving an edge case). I switched hecto to hecta to save another edge case.
+I would like to note that I chose prefixes that were distinct and familiar over ones that were strictly accurate to ancient greek numerals. I chose the most common, simple, and distinct numerals to maximize ease of reading. I also made trivial adaptations to reduce edge cases and improve program efficiency. 
+
+I swapped "deca" for "deka" to distinguish it from "deci". I dropped the "i" in "icosa" to avoid the doubled "i" of "miicosa". I made use of metric prefixes wherever possible ("killo" over "chilla"). To save edge cases, I dropped "myria" for "dekakillo" and switched "hecto" to "hecta".
 
 Take a look at the tables for more information.
 
 
---Going Even Further Beyond: Polymetric Combinations--
+-Going Even Further Beyond: Polymetric Combinations and Enumerating Contiguous Quettas-
 
-At some point the Latin, Greek, and Metric all run out. By combining prefixes, larger numbers can be accounted. Quetta is the metric prefix equivalent to 10^30, it is the largest prefix to date. Given killo is 10^3, 10^33 can be described as killoquetta. This allows for describing arbitrarily high values with arbitrarily many metric prefixes. (Incidentally, this means "diquetta" is 10^30 * 2, and "quettaquetta" is actually 10^30 squared.) 
+Suppose you have embarked on a quest to count all of the natural numbers. "One, two, three", you begin. You have already acquired your immortality; you have adventured throughout the jungles, the cities, the deserts, and the seas, and lived thousands of lives. You have studied under the gurus and mastered the 72 transformations. You have seen the empires rise and fall like waves on the water. You have named every bird on every branch of every tree, and all the creatures of the lands and waters. Now you take a breath and count the stars, until each of the skies of the earth are entirely numbered. You leap skyward, and take a vantage point in the heavens. You see new stars, and continue counting. Well beyond the millions, and the vigintillions, and the minillions, you are counting. You admire stars, pulsars, and quasars, and you are still counting. Mikillonillion has long since passed, as have the megas, and the gigas, the teras. You enumerate the stars across clusters of galaxies, by the zettas, and yottas. In search of the edge of reality, you keep counting, but you quickly arrive at miquettanillion. You are out of Latin numerals, and Greek numerals. What now?
 
-I confess it took me a few version updates to warm up to repeated contiguous quettas, but I have decided to step aside and let the math speak, unimpeded by my arbitrary standards. That said, the least I could do is provide a notation so you do not have to repeat "quetta" endlessly.
+By combining prefixes, larger numbers can be counted. Quetta is the metric prefix equivalent to 10^30, it is the largest metric prefix to date. Given killo is 10^3, 10^33 can be described as killoquetta. However, "quettaquetta" would not be far behind, and "quettaquettaquetta" not much farther. What should be done with these repeating "quetta"s?
 
-Miquettaquettaquettaquettaquettanillion is better written as mi(5)quettanillion, and better pronounced as mi-five-quetta-nillion. You could also call this the first "five-quetta-number". By this method it is possible to use this enumeration to describe itself. For instance, how large is the first minillion-quetta-number? How large is mi(mikillonillion)quettanillion? You can even begin nesting the parentheses.
+To truncate these contiguous quettas, count the number of "quetta"s as a Latin numeral, and swap out the "quetta"s for your Latin and a single "quetta".  By this method, "diquetta" is 10^30 * 2, and "biquetta" is 10^30 squared. For another example, "miquettaquettaquettaquettaquettanillion" is better written as mikaiquinquettanillion, and better pronounced as mi-kai-quin-quetta-nillion. Note that "kai" here is Greek for "and". Why is "kai" here? Well, suppose we have a number with a thousand "quetta"s. As "bi" is taken from billion, "mini" is taken from "minillion". The thousand "quetta" number  would be written as "mikaiminiquettanillion"; "kai" separates the two "mi"s neatly.
+
+After much experimenting. I have decided this was too difficult to implement and test with any reliability. The numbers discussed here are too large to be generated in a timely manner and, the most I can do is generate some of the smaller "poly-quetta" Greek prefixes.
+
+
+
+ 
+--Program Implementation--
+
+-Comparing Enumerations-
+
+Cola's Enumeration and Conway's illion Converter were compared for computing time, and output length, over a range of inputs from 1 to 3,000,000. The following was generated: 
+
+Stats for Cola's Enumeration
+
+Average Enumeration Time:   9.07e-06 seconds
+Average Enumeration Length: 45.443 characters
+
+Maximum Enumeration Time:   0.03 seconds
+Maximum Enumeration Length: 70 characters
+
+Stats for Conway's illion Converter
+
+Average Enumeration Time:   4.49e-06 seconds
+Average Enumeration Length: 50.512 characters
+
+Maximum Enumeration Time:   0.034 seconds
+Maximum Enumeration Length: 77 characters
+
+Predictably, Cola's Enumeration is generally slower, but produces shorter output. This is expected behavior, because Cola's Enumeration performs addtional computations, specifically to shorten output length. While Conway's illion Converter is faster on average, it has a larger maximum time. The larger maximum time is surprising.
+
+-Limitations of this Program-
+
+- Numbers without repeating contiguous substrings in their respective enumerations will still
+  be described with at least one syllable for each non-zero digit. 
+
+- The set of inputs (such that a given input be enumerated in a timely manner) ranges from 
+  1 to 10^10^4 (from one to ten to the power of ten thousand). This makes generating enumerations beyond mikillonillion less than practical. 
+
+- There may still be bugs or duplicated names. The space of all inputs too large to test
+  exhaustively. 
+
+- Hyper E notation is not extended beyond one octothorpe.
+
+-Features-
+
+- A menu with options for experimenting with Cola's Enumeration and Conway's illion Converter.
+
+- A parser for interpreting inputs expressed with arithmetic operations.
+
+- Output with engineering notation and "Hyper E" notation.
+
+- Tables of numbers.
+
+- Enumeration of random input.
+
+- Implementations of short scale and long scale enumerations.
+
+--Conclusion--
+
+-The Foggy Journey to Fish: Wikis, Blogs, and Citogenesis-
+
+While coming to develop this enumeration has been a joy. I do feel the need to critique the various "illion" series on blogs, websites, and wikis that helped inspire this project. Before I learned of the Conway-Weschler system and Conway's illion converter, I was bouncing around on the Googology wiki, the Massive Numbers wiki, and the Gugology wiki, which I had found by chance. From tab to tab, I found various  notations for describing large numbers, lists of named "illions", novel schemes and magnitudes, and lists of tiers to classify numbers. These contributions, though intriguing, were also in conflict. For example, the Googology wiki page for the "thousandth illion" names this number "millinillion" (as in the Conway-Weschler system) but it also includes names like "millillion", "milliatillion", "milletillion", and "platillion". While I can understand the fun of coining names for these large numbers. I question the pedagogical value of various authors arbitrarily naming various large numbers on a blog or wiki, and compiling the (conflicting) results. 
+
+I understand the apparent irony of this questioning, having just written another numbering system for my own fun, and potentially adding to the confusion. That said, googology has developed a "citogenesis" problem (a term describing the memetic growth of citations, to the point of obfuscating the origin of information, by proliferation and indirection). Take "micrillion", as coined by Johnathan Bowers. This number can be found on his blog with other numbers he has coined. There are wikis citing the blog, and there are forum posts citing the wikis, and there also youtube videos linking to other numbers and blog posts and wikis. As of writing, there are thousands of search engine results for "micrillion", parroting this term into veracity without the context of its creation. 
+
+I understand that the Conway-Weschler system, with its endlessly growing number of "illi"s, is not always a practical convention for naming extremely large numbers, but the system is mathematically, and logically, consistent. 
+
+-To Appreciate Numbers Going Up-
+
+So, you might be wondering why I did this: "Who is ever going to need anything like this?", "Why not just use engineering notation, scientific notation, or arrow notation?" Well, you can use this because it is fun. This is the numeric equivalent of a Rube-Goldberg machine, and that is all it needs to be.
+
+Imagine yourself with a great deal of time on your hands. The year is 2023. You had a nondescript operation, and you have left your tutoring job to go on a medical leave. You pick up a new video game to pass the time. It is the kind of game with a bunch of numbers going up; the kind of game where you can click on some stuff, and go to sleep, and come back to find the numbers have gone up, and now you can spend number (yes, number) to get the mcguffin that makes the numbers go up more quickly. You contemplate strategies for making the numbers go up faster. You visit fan pages and wikis for tips and tricks, for slaying the angry number titans, so you can make the numbers go up faster. The game displays numbers with a suffix by default, (such as "6.283 Million") and as the numbers rise from millions to vigintillions, you become curious as to how the dev has named so many numbers. 
+
+You find a list of large numbers on Wikipedia, a few wikis dedicated to naming numbers, and finally Conway's illion Converter. You push it as high as it will let you, and notice the repeating "illi"s on your screen. In the interest of numeric mischief, you decide to play a numeric joke. You think to yourself "maybe I can write a fork, that names some of these illions 'gazillion' or 'jillion', like in that one episode of Futurama, where Phillip J. Fry bids 'one jillion dollars' at auction, and is met with the reply 'Sir, that's not a real number'." It would be funny if jillion was actually a real, defined number. Things like that are funny when you are on painkillers. So, you make some alterations. Funny stuff. However, the Number-Goblin-that-lives-in-your-head-now is not satisfied with this. 
+
+You remember that English has words for shapes in it. Polygons are named with ancient Greek instead of ancient Latin. You can do something with that. So you do something with that, counting the Latin "illi"s with Greek numerals, and it becomes an enumeration that you can name after your older-brother's-college-roomate's-dog-but-sometimes-also-your-family-dog-because-your-family-is-happy-to-sit. How could anyone resist the opportunity to name something after their beloved family dog? So you decide to write the enumeration and name it after the dog. 
+
 
 
 Anyway, have fun with this thing!
 
 -Tables of Numbers-
+
 --Short Scale Tables--
 
 Notes on the Tables:
@@ -511,18 +605,27 @@ I(n)     Suffix                  e(#)      Powers
 
 --Changelog--
 
+-v1.3-
+
+inputs 103 and 300 had the same output, this was due to a block that had remained indented to deeply after removing the clasues for the "modified" system. 
+
+Removed a stubborn bug. The output "centillion" was repeated for 101 - 109.
+This persisted for each hundred.
+
+Added a test to identify these duplications. Iterate, and if I(n) = I(n + 1) break. This is a linear time test, which allows for a search over many inputs.
+
 -v1.2-
 
 Changed "tria" to "tri" for simplicity
 Implemented long scale
 Modified names such that each has only one "illi"
 Greatly simplified the "supermetric" portion of this project. (I had to break some easter eggs.)
+
 Inputs less than one are supported
 
 Updated tables and menu options accordingly
 
 Removed "Boring" and "Wacky" tests
-
 
 -v1.1-
 
@@ -538,12 +641,13 @@ Various optimizations and bug fixes.
 The time to process 10^10^4 has dropped from over 30 seconds to less than a quarter of a second on my machine.
 
 -v1.0-
+
 Initial release
 
 
 --Legal--
 
-Cola's Enumeration is by PixelatedStarfish. Copyright 2024
+Cola's Enumeration is by AndrewJ (PixelatedStarfish). Copyright 2024
 Conway's illion Converter is by Fish. Copyright 2023
 
 MIT License
@@ -584,6 +688,14 @@ https://www.nist.gov/pml/owm/metric-si-prefixes
 Latin Numerals
 https://en.wikipedia.org/wiki/Latin_numerals#:~:text=M%C4%ABlle%20'1000'%20is%20indeclinable%20in,m%C4%ABlle%2C%20deinde%20centum%20(Catullus)
 
+Bowers, Illion Numbers
+https://www.polytope.net/hedrondude/illion.htm
+
+XKCD, Citogenesis
+https://www.explainxkcd.com/wiki/index.php/978:_Citogenesis
+
+"Micrillion" Search of 12,000 results
+https://www.google.com/search?q=micriliion&rlz=1C1VDKB_enUS965US965&oq=micriliion&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIPCAEQABgNGIMBGLEDGIAEMg8IAhAAGA0YgwEYsQMYgAQyDwgDEAAYDRiDARixAxiABDIPCAQQABgNGIMBGLEDGIAEMg8IBRAAGA0YgwEYsQMYgAQyCQgGEAAYDRiABDIJCAcQABgNGIAEMgkICBAAGA0YgAQyCQgJEAAYDRiABNIBCDQyNTVqMGo0qAIAsAIA&sourceid=chrome&ie=UTF-8#ip=1
 
 NGU IDLE
 https://store.steampowered.com/app/1147690/NGU_IDLE/

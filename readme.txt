@@ -8,14 +8,14 @@ Introduction
 How Does Cola's Enumeration Work?
     Truncation by use of Greek Numerals
     Examples of Greek and Metric Prefixes
-    Going Even Further Beyond: Polymetric Combinations
+    Going Even Further Beyond: Polymetric Combinations and Enumerating Contiguous Quettas
 Program Implementation 
     Comparing Enumerations: "So, is it any good?"
     Limitations of this Program
     Features
 Conclusion
-
-
+    The Foggy Journey to Fish: Wikis, Blogs, and Citogenesis
+    To Appreciate Numbers Going Up
 Tables of Numbers
     Short Scale Tables
     Long Scale Tables

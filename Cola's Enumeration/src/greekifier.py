@@ -6,7 +6,7 @@ DESCRIPTION = "This is more like a polygon of n sides generator"
 ISOLATE = ["killo", "hena", "di", "tri", "tetra", "penta", "hexa", "hepta", "octa", "nona"] #not using ennea
 CW_UNI = ['', 'un', 'do', 'tris', 'tetra', 'penta', 'hexa',
           'hepta', 'octa', 'nona']  
-TEN =  ["", "deka", "cosi", "tricontakai", "tetracontakai", "pentacontakai", "hexacontakai", "heptacontakai", "octacontakai", "nonacontakai"] # I use "deka" to distinguish from deci
+TEN =  ["", "deka", "icosi", "tricontakai", "tetracontakai", "pentacontakai", "hexacontakai", "heptacontakai", "octacontakai", "nonacontakai"] # I use "deka" to distinguish from deci
 HUN = ["", "hecta", "dihecta", "trihectakai", "tetrahectakai", "pentahectakai", "hexahectakai", "heptahectakai","octahectakai", "nonahectakai"] # one hundred is technically hecto, but whatever...
 PREC_TEN = ['', 'N', 'MS', 'NS', 'NS', 'NS', 'N', 'N', 'MX', '']
 PREC_HUN = ['', 'NX', 'N', 'NS', 'NS', 'NS', 'N', 'N', 'MX', '']
@@ -22,7 +22,7 @@ MET_END = METRIC[len(METRIC) - 1]
 #so... lets just take each digit and create tuples with the digit and the corresponding value of ten to put into a hash table 
 def GreekGen(n):
     if (n > -1 and n < 21):
-        ListOfAnnoyingExceptions = ["", "", "di", "tri", "tetra", "penta", "hexa", "hepta", "octa", "nona", "deka", "undeka", "dodeka", "trisdeka", "tetradeka", "pentadeka", "hexadeka", "heptadeka", "octadeka", "nonadeka", "cosa"]
+        ListOfAnnoyingExceptions = ["", "", "di", "tri", "tetra", "penta", "hexa", "hepta", "octa", "nona", "deka", "undeka", "dodeka", "trisdeka", "tetradeka", "pentadeka", "hexadeka", "heptadeka", "octadeka", "nonadeka", "icosa"]
         #print(n, ListOfAnnoyingExceptions[len(ListOfAnnoyingExceptions)- 1])
         return ListOfAnnoyingExceptions[n] #no cluttering up my nice table
     s = str(n)
@@ -52,13 +52,19 @@ def HashTable(msd, place, LuckyZero = False): #place = log10(n)  #msd: most sign
     if (place == 0):
         return ISOLATE[msd] 
 
-    #supermetric
+    #metric
     if ((place // 3) - 1 < len(METRIC)):
         if (not place % 3  == 0):
             out += GreekGen(msd * (10 * place)) 
         if (place % 3 == 0 or LuckyZero):
             out += METRIC[(place // 3) - 1]
     else: 
+
+        return "apeiro"
+
+
+        '''
+        Implementing the rules in the readme is more trouble than is reasonable
 
         divmodConst = 3 * len(METRIC)
         p = place % divmodConst #place // 30
@@ -71,6 +77,8 @@ def HashTable(msd, place, LuckyZero = False): #place = log10(n)  #msd: most sign
         #Notably 10^30 * 2 is diquetta, but 10^33 * 2 is not dikillioquetta
         #Also didekaquetta is not called cosaquetta
         #This is a bug!
+
+        '''
 
     return out
 

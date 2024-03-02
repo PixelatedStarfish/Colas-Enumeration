@@ -101,7 +101,7 @@ def llion(n, finalFlash = True):
 def concat(n, suffix, finalFlash = True):
     result = base(n, finalFlash) + suffix
     if suffix == '' and finalFlash:
-        result += 'llion'
+        result += 'lion'
     #print("base is " + result)
     return result
 
@@ -109,7 +109,7 @@ def concat(n, suffix, finalFlash = True):
 def base(n, finalFlash = True):
     name = ""
     if n < 10:
-        return ISOLATE[n] #+ 'lli'
+        return ISOLATE[n] + 'l'
     unit = n % 10
     ten = (n//10) % 10
     hun = n//100

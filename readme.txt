@@ -61,6 +61,8 @@ A string composed of the contiguous repeated substring "nilli" looks like this:
 
 The five "nilli"s of this substring can be truncated to "pentanillion" in Cola's Enumeration, with "penta" refering to the Greek numeral for five. Millinillinillinillinillinillion in the Conway-Weschler system is enumerated as millpentanillion in Cola's Enumeration.
 
+(In practice, only repeated groups of 3 digits, which are also contiguous, are truncated. 999,999,888-illion does not share a name with 999,888,999,888-illion.)
+
 -Examples of Greek Prefixes-
 
     hena      - 1
@@ -70,7 +72,7 @@ The five "nilli"s of this substring can be truncated to "pentanillion" in Cola's
     penta     - 5
     hexa      - 6
     hepta     - 7
-    octa      - 8
+    okta      - 8 (pronounce the first syllable like "oak")
     nona      - 9
     deka      - 10
     undeka    - 11
@@ -331,7 +333,7 @@ I(n)    Suffix                e(#)             Powers
 10^15   millpentanillion      1e+300003#2      10^^2^300003
 10^18   millhexanillion       1e+300000003#2   10^^2^300000003
 10^21   millheptanillion      1e+33#3          10^^3^33
-10^24   milloctanillion       1e+30003#3       10^^3^30003
+10^24   milloktanillion       1e+30003#3       10^^3^30003
 10^27   millnonanillion       1e+30000003#3    10^^3^30000003
 10^30   milldekanillion       1e+6#4           10^^4^6
 10^33   millundekanillion     1e+3003#4        10^^4^3003
@@ -341,7 +343,7 @@ I(n)    Suffix                e(#)             Powers
 10^45   millpentadekanillion  1e+300003#5      10^^5^300003
 10^48   millhexadekanillion   1e+300000003#5   10^^5^300000003
 10^51   millheptadekanillion  1e+33#6          10^^6^33
-10^54   milloctadekanillion   1e+30003#6       10^^6^30003
+10^54   milloktadekanillion   1e+30003#6       10^^6^30003
 10^57   millnonadekanillion   1e+30000003#6    10^^6^30000003
 10^60   millicosanillion      1e+6#7           10^^7^6
 ======  ====================  ===============  ================
@@ -360,7 +362,7 @@ I(n)    Suffix                    e(#)     Powers
 10^150  millpentacontakainillion  1e+6#16  10^^16^6
 10^180  millhexacontakainillion   1e+6#19  10^^19^6
 10^210  millheptacontakainillion  1e+6#22  10^^22^6
-10^240  milloctacontakainillion   1e+6#25  10^^25^6
+10^240  milloktacontakainillion   1e+6#25  10^^25^6
 10^270  millnonacontakainillion   1e+6#28  10^^28^6
 10^300  millhectanillion          1e+6#31  10^^31^6
 ======  ========================  =======  ========
@@ -378,7 +380,7 @@ I(n)     Suffix                    e(#)      Powers
 10^1500  millpentahectakainillion  1e+6#151  10^^151^6
 10^1800  millhexahectakainillion   1e+6#181  10^^181^6
 10^2100  millheptahectakainillion  1e+6#211  10^^211^6
-10^2400  milloctahectakainillion   1e+6#241  10^^241^6
+10^2400  milloktahectakainillion   1e+6#241  10^^241^6
 10^2700  millnonahectakainillion   1e+6#271  10^^271^6
 10^3000  millkilonillion           1e+6#301  10^^301^6
 =======  ========================  ========  =========
@@ -538,7 +540,7 @@ I(n)    Suffix                e(#)             Powers
 10^15   millpentanillion      1e+600000#2      10^^2^600000
 10^18   millhexanillion       1e+600000000#2   10^^2^600000000
 10^21   millheptanillion      1e+60#3          10^^3^60
-10^24   milloctanillion       1e+60000#3       10^^3^60000
+10^24   milloktanillion       1e+60000#3       10^^3^60000
 10^27   millnonanillion       1e+60000000#3    10^^3^60000000
 10^30   milldekanillion       1e+6#4           10^^4^6
 10^33   millundekanillion     1e+6000#4        10^^4^6000
@@ -548,7 +550,7 @@ I(n)    Suffix                e(#)             Powers
 10^45   millpentadekanillion  1e+600000#5      10^^5^600000
 10^48   millhexadekanillion   1e+600000000#5   10^^5^600000000
 10^51   millheptadekanillion  1e+60#6          10^^6^60
-10^54   milloctadekanillion   1e+60000#6       10^^6^60000
+10^54   milloktadekanillion   1e+60000#6       10^^6^60000
 10^57   millnonadekanillion   1e+60000000#6    10^^6^60000000
 10^60   millicosanillion      1e+6#7           10^^7^6
 ======  ====================  ===============  ================
@@ -567,7 +569,7 @@ I(n)    Suffix                    e(#)     Powers
 10^150  millpentacontakainillion  1e+6#16  10^^16^6
 10^180  millhexacontakainillion   1e+6#19  10^^19^6
 10^210  millheptacontakainillion  1e+6#22  10^^22^6
-10^240  milloctacontakainillion   1e+6#25  10^^25^6
+10^240  milloktacontakainillion   1e+6#25  10^^25^6
 10^270  millnonacontakainillion   1e+6#28  10^^28^6
 10^300  millhectanillion          1e+6#31  10^^31^6
 ======  ========================  =======  ========
@@ -585,7 +587,7 @@ I(n)     Suffix                    e(#)      Powers
 10^1500  millpentahectakainillion  1e+6#151  10^^151^6
 10^1800  millhexahectakainillion   1e+6#181  10^^181^6
 10^2100  millheptahectakainillion  1e+6#211  10^^211^6
-10^2400  milloctahectakainillion   1e+6#241  10^^241^6
+10^2400  milloktahectakainillion   1e+6#241  10^^241^6
 10^2700  millnonahectakainillion   1e+6#271  10^^271^6
 10^3000  millkilonillion           1e+6#301  10^^301^6
 =======  ========================  ========  =========
@@ -596,9 +598,11 @@ I(n)     Suffix                    e(#)      Powers
 
 (Been a year, how time flies...)
 
-Fixed some typos, but that is never done.
+Fixed some typos, but that is never done. Made minor revision to the readme.
 
 "killo" is corrected to "kilo"
+
+switched greek 8 to okta (as in oak) to avoid confusion with octo.
 
 Added another to "milnillion" so it is now millnillion. This applies to all derivative numbers as well. This should make long names easier to parse, such that each subsequent "ll" describes one thousand Latin enumerations each.
 

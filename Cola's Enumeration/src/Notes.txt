@@ -1,0 +1,30 @@
+1.4
+
+Compare I(1234567)
+note how the illion converter makes the name easier to parse becasue the "illis" are there to seperate thousands
+Cola's enum needs to add these "ills" back. 
+
+I(100,000) should be one centillnillion, not one centinillion. 
+I(1,000) should be one millnillion, not milnillion
+(did that yay)
+
+"Kilo" was misspelled as "killo", fixed...
+
+Also python implemented a function to prevent DDOS attacks, but it also works nicely to cap our enumerator and prevent it from frying the computer... I think "mikilonillion" is a resonable maximum anyway. Oversights... that's what version 1.4 is for
+
+It would be nice to have an exe version, with command line args.
+
+
+
+[I(999 999 888) does not colide with I(999 888 999 888) because the greekifier only truncates repeated blocks of three digits...] 
+
+Also I think I said the illion converter was slower than mine, but the data shows it as faster.(Fixed)
+
+This thing needs python and libraries to be installed for it to work, so I added a cmd script to install dependancies. Ideally the crash would be caught, and an installation attempted... idk
+
+
+switched greek 8 to okta (as in oak) to avoid confusion with octo.
+
+trentillion could be a more distinct name for I(300) or I(103), which have very similar names, but trescentillion for 103 has already stuck so, eh...
+
+[Maybe there's a "best of both worlds" a new way that's more of a 2.0... the whole point of shortening the numbers was to make them readable, but it made the non round numbers less readable in some cases.]

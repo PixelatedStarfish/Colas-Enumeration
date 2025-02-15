@@ -20,6 +20,7 @@ Tables of Numbers
     Short Scale Tables
     Long Scale Tables
 Change Log
+    v1.4
     v1.3
     v1.2
     v1.1
@@ -58,9 +59,9 @@ Cola's Enumeration uses Greek numerals (also used for naming polygons) to trunca
 A string composed of the contiguous repeated substring "nilli" looks like this:
     "nillinillinillinillinilli"
 
-The five "nilli"s of this substring can be truncated to "pentanillion" in Cola's Enumeration, with "penta" refering to the Greek numeral for five. Millinillinillinillinillinillion in the Conway-Weschler system is enumerated as milpentanillion in Cola's Enumeration.
+The five "nilli"s of this substring can be truncated to "pentanillion" in Cola's Enumeration, with "penta" refering to the Greek numeral for five. Millinillinillinillinillinillion in the Conway-Weschler system is enumerated as millpentanillion in Cola's Enumeration.
 
--Examples of Greek and Metric Prefixes-
+-Examples of Greek Prefixes-
 
     hena      - 1
     di        - 2
@@ -79,37 +80,25 @@ The five "nilli"s of this substring can be truncated to "pentanillion" in Cola's
     icosa     - 20
     triconta  - 30
     hecta     - 100
-    killo     - 1000
-    mega      - 10^6
-    giga      - 10^9
-    tera      - 10^12
-    peta      - 10^15
-    exa       - 10^18
-    zetta     - 10^21
-    yotta     - 10^24
-    ronna     - 10^27
-    quetta    - 10^30
-
+    kilo      - 1000
+    
 
 I would like to note that I chose prefixes that were distinct and familiar over ones that were strictly accurate to ancient greek numerals. I chose the most common, simple, and distinct numerals to maximize ease of reading. I also made trivial adaptations to reduce edge cases and improve program efficiency. 
 
-I swapped "deca" for "deka" to distinguish it from "deci". I made use of metric prefixes wherever possible ("killo" over "chilla"). To save edge cases, I dropped "myria" for "dekakillo" and switched "hecto" to "hecta". I changed the Greek "tri" to "tris" (from the numeral for 13) to distinguish it from the Latin "tri".
+I swapped "deca" for "deka" to distinguish it from "deci". I made use of metric prefixes wherever possible ("kilo" over "chilla"). To save edge cases, I dropped "myria" for "dekakilo" and switched "hecto" to "hecta". I changed the Greek "tri" to "tris" (from the numeral for 13) to distinguish it from the Latin "tri".
 
 Take a look at the tables for more information.
 
 
 -Going Even Further Beyond: Polymetric Combinations and Enumerating Contiguous Quettas-
 
-Suppose you have embarked on a quest to count all of the natural numbers. "One, two, three", you begin. You have already acquired your immortality; you have adventured throughout the jungles, the cities, the deserts, and the seas, and lived thousands of lives. You have studied under the gurus and mastered the 72 transformations. You have seen the empires rise and fall like waves on the water. You have named every bird on every branch of every tree, and all the creatures of the lands and waters. Now you take a breath and count the stars, until each of the skies of the earth are entirely numbered. You leap skyward, and take a vantage point in the heavens. You see new stars, and continue counting. Well beyond the millions, and the vigintillions, and the milnillions, you are counting. You admire stars, pulsars, and quasars, and you are still counting. Milkillonillion has long since passed, as have the megas, and the gigas, the teras. You enumerate the stars across clusters of galaxies, by the zettas, and yottas. In search of the edge of reality, you keep counting, but you quickly arrive at milquettanillion. You are out of Latin numerals, and Greek numerals. What now?
+Suppose you have embarked on a quest to count all of the natural numbers. "One, two, three", you begin. You have already acquired your immortality; you have adventured throughout the jungles, the cities, the deserts, and the seas, and lived thousands of lives. You have studied under the gurus and mastered the 72 transformations. You have seen the empires rise and fall like waves on the water. You have named every bird on every branch of every tree, and all the creatures of the lands and waters. Now you take a breath and count the stars, until each of the skies of the earth are entirely numbered. You leap skyward, and take a vantage point in the heavens. You see new stars, and continue counting. Well beyond the millions, and the vigintillions, and the millnillions, you are counting. You admire stars, pulsars, and quasars, and you are still counting. Milkilonillion has long since passed, as have the megas, and the gigas, the teras. You enumerate the stars across clusters of galaxies, by the zettas, and yottas. In search of the edge of reality, you keep counting, but you quickly arrive at millquettanillion. You are out of Latin numerals, and Greek numerals. What now?
 
-By combining prefixes, larger numbers can be counted. Quetta is the metric prefix equivalent to 10^30, it is the largest metric prefix to date. Given killo is 10^3, 10^33 can be described as killoquetta. However, "quettaquetta" would not be far behind, and "quettaquettaquetta" not much farther. What should be done with these repeating "quetta"s?
+By combining prefixes, larger numbers can be counted. Quetta is the metric prefix equivalent to 10^30, it is the largest metric prefix to date. Given kilo is 10^3, 10^33 can be described as kiloquetta. However, "quettaquetta" would not be far behind, and "quettaquettaquetta" not much farther. What should be done with these repeating "quetta"s?
 
-To truncate these contiguous quettas, count the number of "quetta"s as a Latin numeral, and swap out the "quetta"s for your Latin and a single "quetta".  By this method, "diquetta" is 10^30 * 2, and "biquetta" is 10^30 squared. For another example, "milquettaquettaquettaquettaquettanillion" is better written as milkaiquinquettanillion, and better pronounced as mil-kai-quin-quetta-nillion. Note that "kai" here is Greek for "and". Why is "kai" here? Well, suppose we have a number with a thousand "quetta"s. As "bi" is taken from billion, "milni" is taken from "milnillion". The thousand "quetta" number  would be written as "milkaimilniquettanillion"; "kai" separates the two "mil"s neatly.
+To truncate these contiguous quettas, count the number of "quetta"s as a Latin numeral, and swap out the "quetta"s for your Latin and a single "quetta".  By this method, "diquetta" is 10^30 * 2, and "biquetta" is 10^30 squared. For another example, "millquettaquettaquettaquettaquettanillion" is better written as millkaiquinquettanillion, and better pronounced as mill-kai-quin-quetta-nillion. Note that "kai" here is Greek for "and". Why is "kai" here? Well, suppose we have a number with a thousand "quetta"s. As "bi" is taken from billion, "millni" is taken from "millnillion". The thousand "quetta" number  would be written as "millkaimillniquettanillion"; "kai" separates the two "mill"s neatly.
 
 After much experimenting. I have decided this was too difficult to implement and test with any reliability. The numbers discussed here are too large to be generated in a timely manner and, the most I can do is generate some of the smaller "poly-quetta" Greek prefixes.
-
-
-
  
 --Program Implementation--
 
@@ -119,29 +108,29 @@ Cola's Enumeration and Conway's illion Converter were compared for computing tim
 
 -Stats for Cola's Enumeration-
 
-Average Enumeration Time:   2.2745138e-05 seconds
-Average Enumeration Length: 45.181 characters
+Average Enumeration Time:   2.644346e-06 seconds
+Average Enumeration Length: 48.824 characters
 
-Maximum Enumeration Time:   0.034 seconds
-Maximum Enumeration Length: 70 characters
+Maximum Enumeration Time:   0.004 seconds
+Maximum Enumeration Length: 74 characters
 
 -Stats for Conway's illion Converter-
 
-Average Enumeration Time:   1.1275619e-05 seconds
+Average Enumeration Time:   1.343678e-06 seconds
 Average Enumeration Length: 50.512 characters
 
-Maximum Enumeration Time:   0.009 seconds
+Maximum Enumeration Time:   0.003 seconds
 Maximum Enumeration Length: 77 characters
 
-Predictably, Cola's Enumeration is generally slower, but produces shorter output. This is expected behavior, because Cola's Enumeration performs addtional computations, specifically to shorten output length. While Conway's illion Converter is faster on average, it has a larger maximum time. The larger maximum time is surprising.
+
+Predictably, Cola's Enumeration is generally slower, but produces shorter output. This is expected behavior, because Cola's Enumeration performs addtional computations, specifically to shorten output length.
 
 -Limitations of this Program-
 
 - Numbers without repeating contiguous substrings in their respective enumerations will still
   be described with at least one syllable for each non-zero digit. 
 
-- The set of inputs (such that a given input be enumerated in a timely manner) ranges from 
-  1 to 10^10^4 (from one to ten to the power of ten thousand). This makes generating enumerations beyond milkillonillion less than practical. 
+- millkillonillion is the largest value possible to generate as of version 1.4. This prevents intensive calculations.
 
 - There may still be bugs or duplicated names. The space of all inputs too large to test
   exhaustively. 
@@ -198,202 +187,201 @@ I(n) = 10^(3n + 3) [Short scale]
 e+ notates a power of 10
 e# describes a tetration of 10 (as hyper e notation)
 
+      One Million to One Vigintillion
 
-      One Million to One Vigintilion
-
-======  ================  ======  ========
-  I(n)  Suffix              e(#)  Powers
-======  ================  ======  ========
-     1  million            1e+06  10^6
-     2  billion            1e+09  10^9
-     3  trillion           1e+12  10^12
-     4  quadrillion        1e+15  10^15
-     5  quintillion        1e+18  10^18
-     6  sextillion         1e+21  10^21
-     7  septillion         1e+24  10^24
-     8  octillion          1e+27  10^27
-     9  nonillion          1e+30  10^30
-    10  decilion           1e+33  10^33
-    11  undecilion         1e+36  10^36
-    12  duodecilion        1e+39  10^39
-    13  tredecilion        1e+42  10^42
-    14  quattuordecilion   1e+45  10^45
-    15  quindecilion       1e+48  10^48
-    16  sedecilion         1e+51  10^51
-    17  septendecilion     1e+54  10^54
-    18  octodecilion       1e+57  10^57
-    19  novendecilion      1e+60  10^60
-    20  vigintilion        1e+63  10^63
-======  ================  ======  ========
-
-
-       One Million to One Centilion
-
-======  ================  ======  ========
-  I(n)  Suffix              e(#)  Powers
-======  ================  ======  ========
-     1  million           1e+06   10^6
-    10  decilion          1e+33   10^33
-    20  vigintilion       1e+63   10^63
-    30  trigintilion      1e+93   10^93
-    40  quadragintilion   1e+123  10^123
-    50  quinquagintilion  1e+153  10^153
-    60  sexagintilion     1e+183  10^183
-    70  septuagintilion   1e+213  10^213
-    80  octogintilion     1e+243  10^243
-    90  nonagintilion     1e+273  10^273
-   100  centilion         1e+303  10^303
-======  ================  ======  ========
+======  =================  ======  ========
+  I(n)  Suffix               e(#)  Powers
+======  =================  ======  ========
+     1  million             1e+06  10^6
+     2  billion             1e+09  10^9
+     3  trillion            1e+12  10^12
+     4  quadrillion         1e+15  10^15
+     5  quintillion         1e+18  10^18
+     6  sextillion          1e+21  10^21
+     7  septillion          1e+24  10^24
+     8  octillion           1e+27  10^27
+     9  nonillion           1e+30  10^30
+    10  decillion           1e+33  10^33
+    11  undecillion         1e+36  10^36
+    12  duodecillion        1e+39  10^39
+    13  tredecillion        1e+42  10^42
+    14  quattuordecillion   1e+45  10^45
+    15  quindecillion       1e+48  10^48
+    16  sedecillion         1e+51  10^51
+    17  septendecillion     1e+54  10^54
+    18  octodecillion       1e+57  10^57
+    19  novendecillion      1e+60  10^60
+    20  vigintillion        1e+63  10^63
+======  =================  ======  ========
 
 
-       One Million to One Milnillion
+       One Million to One Centillion
 
-======  ================  =======  ========
-  I(n)  Suffix            e(#)     Powers
-======  ================  =======  ========
-     1  million           1e+6     10^6
-   100  centilion         1e+303   10^303
-   200  ducentilion       1e+603   10^603
-   300  trecentilion      1e+903   10^903
-   400  quadringentilion  1e+1203  10^1203
-   500  quingentilion     1e+1503  10^1503
-   600  sescentilion      1e+1803  10^1803
-   700  septingentilion   1e+2103  10^2103
-   800  octingentilion    1e+2403  10^2403
-   900  nongentilion      1e+2703  10^2703
-  1000  milnillion        1e+3003  10^3003
-======  ================  =======  ========
-
-
-     One Milnillion to One Vigintinillion
-
-======  ===================  ========  ========
-  I(n)  Suffix               e(#)      Powers
-======  ===================  ========  ========
-  1000  milnillion           1e+3003   10^3003
-  2000  bilnillion           1e+6003   10^6003
-  3000  trilnillion          1e+9003   10^9003
-  4000  quadrilnillion       1e+12003  10^12003
-  5000  quintilnillion       1e+15003  10^15003
-  6000  sextilnillion        1e+18003  10^18003
-  7000  septilnillion        1e+21003  10^21003
-  8000  octilnillion         1e+24003  10^24003
-  9000  nonilnillion         1e+27003  10^27003
- 10000  decinillion          1e+30003  10^30003
- 11000  undecinillion        1e+33003  10^33003
- 12000  duodecinillion       1e+36003  10^36003
- 13000  tredecinillion       1e+39003  10^39003
- 14000  quattuordecinillion  1e+42003  10^42003
- 15000  quindecinillion      1e+45003  10^45003
- 16000  sedecinillion        1e+48003  10^48003
- 17000  septendecinillion    1e+51003  10^51003
- 18000  octodecinillion      1e+54003  10^54003
- 19000  novendecinillion     1e+57003  10^57003
- 20000  vigintinillion       1e+60003  10^60003
-======  ===================  ========  ========
+======  =================  ======  ========
+  I(n)  Suffix               e(#)  Powers
+======  =================  ======  ========
+     1  million            1e+06   10^6
+    10  decillion          1e+33   10^33
+    20  vigintillion       1e+63   10^63
+    30  trigintillion      1e+93   10^93
+    40  quadragintillion   1e+123  10^123
+    50  quinquagintillion  1e+153  10^153
+    60  sexagintillion     1e+183  10^183
+    70  septuagintillion   1e+213  10^213
+    80  octogintillion     1e+243  10^243
+    90  nonagintillion     1e+273  10^273
+   100  centillion         1e+303  10^303
+======  =================  ======  ========
 
 
-       One Milnillion to One Centinillion
+       One Million to One Millnillion
 
-======  ===================  =========  =========
-  I(n)  Suffix               e(#)       Powers
-======  ===================  =========  =========
-  1000  milnillion           1e+3003    10^3003
- 10000  decinillion          1e+30003   10^30003
- 20000  vigintinillion       1e+60003   10^60003
- 30000  trigintanillion      1e+90003   10^90003
- 40000  quadragintanillion   1e+120003  10^120003
- 50000  quinquagintanillion  1e+150003  10^150003
- 60000  sexagintanillion     1e+180003  10^180003
- 70000  septuagintanillion   1e+210003  10^210003
- 80000  octogintanillion     1e+240003  10^240003
- 90000  nonagintanillion     1e+270003  10^270003
-100000  centinillion         1e+300003  10^300003
-======  ===================  =========  =========
-
-
-        One Milnillion to One Mildinillion
-
-======  ===================  ==========  ==========
-I(n)    Suffix               e(#)        Powers
-======  ===================  ==========  ==========
-1000    milnillion           1e+3003     10^3003
-100000  centinillion         1e+300003   10^300003
-200000  ducentinillion       1e+600003   10^600003
-300000  trecentinillion      1e+900003   10^900003
-400000  quadringentinillion  1e+1200003  10^1200003
-500000  quingentinillion     1e+1500003  10^1500003
-600000  sescentinillion      1e+1800003  10^1800003
-700000  septingentinillion   1e+2100003  10^2100003
-800000  octingentinillion    1e+2400003  10^2400003
-900000  nongentinillion      1e+2700003  10^2700003
-10^6    mildinillion         1e+3000003  10^3000003
-======  ===================  ==========  ==========
+======  =================  =======  ========
+  I(n)  Suffix             e(#)     Powers
+======  =================  =======  ========
+     1  million            1e+6     10^6
+   100  centillion         1e+303   10^303
+   200  ducentillion       1e+603   10^603
+   300  trecentillion      1e+903   10^903
+   400  quadringentillion  1e+1203  10^1203
+   500  quingentillion     1e+1503  10^1503
+   600  sescentillion      1e+1803  10^1803
+   700  septingentillion   1e+2103  10^2103
+   800  octingentillion    1e+2403  10^2403
+   900  nongentillion      1e+2703  10^2703
+  1000  millnillion        1e+3003  10^3003
+======  =================  =======  ========
 
 
-             One Milnillion to One Milicosanillion
+     One Millnillion to One Vigintillnillion
 
-======  ===================  ===============  ================
-I(n)    Suffix               e(#)             Powers
-======  ===================  ===============  ================
-1000    milnillion           1e+3003          10^3003
-10^6    mildinillion         1e+3000003       10^3000003
-10^9    miltrinillion        1e+3000000003    10^3000000003
-10^12   miltetranillion      1e+303#2         10^^2^303
-10^15   milpentanillion      1e+300003#2      10^^2^300003
-10^18   milhexanillion       1e+300000003#2   10^^2^300000003
-10^21   milheptanillion      1e+33#3          10^^3^33
-10^24   miloctanillion       1e+30003#3       10^^3^30003
-10^27   milnonanillion       1e+30000003#3    10^^3^30000003
-10^30   mildekanillion       1e+6#4           10^^4^6
-10^33   milundekanillion     1e+3003#4        10^^4^3003
-10^36   mildodekanillion     1e+3000003#4     10^^4^3000003
-10^39   miltrisdekanillion   1e+3000000003#4  10^^4^3000000003
-10^42   miltetradekanillion  1e+303#5         10^^5^303
-10^45   milpentadekanillion  1e+300003#5      10^^5^300003
-10^48   milhexadekanillion   1e+300000003#5   10^^5^300000003
-10^51   milheptadekanillion  1e+33#6          10^^6^33
-10^54   miloctadekanillion   1e+30003#6       10^^6^30003
-10^57   milnonadekanillion   1e+30000003#6    10^^6^30000003
-10^60   milicosanillion      1e+6#7           10^^7^6
-======  ===================  ===============  ================
-
-
-       One Milnillion to One Milhectanillion
-
-======  =======================  =======  ========
-I(n)    Suffix                   e(#)     Powers
-======  =======================  =======  ========
-1000    milnillion               1e+3003  10^3003
-10^30   mildekanillion           1e+6#4   10^^4^6
-10^60   milicosanillion          1e+6#7   10^^7^6
-10^90   miltricontakainillion    1e+6#10  10^^10^6
-10^120  miltetracontakainillion  1e+6#13  10^^13^6
-10^150  milpentacontakainillion  1e+6#16  10^^16^6
-10^180  milhexacontakainillion   1e+6#19  10^^19^6
-10^210  milheptacontakainillion  1e+6#22  10^^22^6
-10^240  miloctacontakainillion   1e+6#25  10^^25^6
-10^270  milnonacontakainillion   1e+6#28  10^^28^6
-10^300  milhectanillion          1e+6#31  10^^31^6
-======  =======================  =======  ========
+======  =====================  ========  ========
+  I(n)  Suffix                 e(#)      Powers
+======  =====================  ========  ========
+  1000  millnillion            1e+3003   10^3003
+  2000  billnillion            1e+6003   10^6003
+  3000  trillnillion           1e+9003   10^9003
+  4000  quadrillnillion        1e+12003  10^12003
+  5000  quintillnillion        1e+15003  10^15003
+  6000  sextillnillion         1e+18003  10^18003
+  7000  septillnillion         1e+21003  10^21003
+  8000  octillnillion          1e+24003  10^24003
+  9000  nonillnillion          1e+27003  10^27003
+ 10000  decillnillion          1e+30003  10^30003
+ 11000  undecillnillion        1e+33003  10^33003
+ 12000  duodecillnillion       1e+36003  10^36003
+ 13000  tredecillnillion       1e+39003  10^39003
+ 14000  quattuordecillnillion  1e+42003  10^42003
+ 15000  quindecillnillion      1e+45003  10^45003
+ 16000  sedecillnillion        1e+48003  10^48003
+ 17000  septendecillnillion    1e+51003  10^51003
+ 18000  octodecillnillion      1e+54003  10^54003
+ 19000  novendecillnillion     1e+57003  10^57003
+ 20000  vigintillnillion       1e+60003  10^60003
+======  =====================  ========  ========
 
 
-     One Milhectanillion to One Milkillonillion
+       One Millnillion to One Centillnillion
 
-=======  =======================  ========  =========
-I(n)     Suffix                   e(#)      Powers
-=======  =======================  ========  =========
-10^300   milhectanillion          1e+6#31   10^^31^6
-10^600   mildihectanillion        1e+6#61   10^^61^6
-10^900   miltrihectakainillion    1e+6#91   10^^91^6
-10^1200  miltetrahectakainillion  1e+6#121  10^^121^6
-10^1500  milpentahectakainillion  1e+6#151  10^^151^6
-10^1800  milhexahectakainillion   1e+6#181  10^^181^6
-10^2100  milheptahectakainillion  1e+6#211  10^^211^6
-10^2400  miloctahectakainillion   1e+6#241  10^^241^6
-10^2700  milnonahectakainillion   1e+6#271  10^^271^6
-10^3000  milkillonillion          1e+6#301  10^^301^6
-=======  =======================  ========  =========
+======  =====================  =========  =========
+  I(n)  Suffix                 e(#)       Powers
+======  =====================  =========  =========
+  1000  millnillion            1e+3003    10^3003
+ 10000  decillnillion          1e+30003   10^30003
+ 20000  vigintillnillion       1e+60003   10^60003
+ 30000  trigintallnillion      1e+90003   10^90003
+ 40000  quadragintallnillion   1e+120003  10^120003
+ 50000  quinquagintallnillion  1e+150003  10^150003
+ 60000  sexagintallnillion     1e+180003  10^180003
+ 70000  septuagintallnillion   1e+210003  10^210003
+ 80000  octogintallnillion     1e+240003  10^240003
+ 90000  nonagintallnillion     1e+270003  10^270003
+100000  centillnillion         1e+300003  10^300003
+======  =====================  =========  =========
+
+
+        One Millnillion to One Milldinillion
+
+======  =====================  ==========  ==========
+I(n)    Suffix                 e(#)        Powers
+======  =====================  ==========  ==========
+1000    millnillion            1e+3003     10^3003
+100000  centillnillion         1e+300003   10^300003
+200000  ducentillnillion       1e+600003   10^600003
+300000  trecentillnillion      1e+900003   10^900003
+400000  quadringentillnillion  1e+1200003  10^1200003
+500000  quingentillnillion     1e+1500003  10^1500003
+600000  sescentillnillion      1e+1800003  10^1800003
+700000  septingentillnillion   1e+2100003  10^2100003
+800000  octingentillnillion    1e+2400003  10^2400003
+900000  nongentillnillion      1e+2700003  10^2700003
+10^6    milldinillion          1e+3000003  10^3000003
+======  =====================  ==========  ==========
+
+
+            One Millnillion to One Millicosanillion
+
+======  ====================  ===============  ================
+I(n)    Suffix                e(#)             Powers
+======  ====================  ===============  ================
+1000    millnillion           1e+3003          10^3003
+10^6    milldinillion         1e+3000003       10^3000003
+10^9    milltrisnillion       1e+3000000003    10^3000000003
+10^12   milltetranillion      1e+303#2         10^^2^303
+10^15   millpentanillion      1e+300003#2      10^^2^300003
+10^18   millhexanillion       1e+300000003#2   10^^2^300000003
+10^21   millheptanillion      1e+33#3          10^^3^33
+10^24   milloctanillion       1e+30003#3       10^^3^30003
+10^27   millnonanillion       1e+30000003#3    10^^3^30000003
+10^30   milldekanillion       1e+6#4           10^^4^6
+10^33   millundekanillion     1e+3003#4        10^^4^3003
+10^36   milldodekanillion     1e+3000003#4     10^^4^3000003
+10^39   milltrisdekanillion   1e+3000000003#4  10^^4^3000000003
+10^42   milltetradekanillion  1e+303#5         10^^5^303
+10^45   millpentadekanillion  1e+300003#5      10^^5^300003
+10^48   millhexadekanillion   1e+300000003#5   10^^5^300000003
+10^51   millheptadekanillion  1e+33#6          10^^6^33
+10^54   milloctadekanillion   1e+30003#6       10^^6^30003
+10^57   millnonadekanillion   1e+30000003#6    10^^6^30000003
+10^60   millicosanillion      1e+6#7           10^^7^6
+======  ====================  ===============  ================
+
+
+      One Millnillion to One Millhectanillion
+
+======  ========================  =======  ========
+I(n)    Suffix                    e(#)     Powers
+======  ========================  =======  ========
+1000    millnillion               1e+3003  10^3003
+10^30   milldekanillion           1e+6#4   10^^4^6
+10^60   millicosanillion          1e+6#7   10^^7^6
+10^90   milltricontakainillion    1e+6#10  10^^10^6
+10^120  milltetracontakainillion  1e+6#13  10^^13^6
+10^150  millpentacontakainillion  1e+6#16  10^^16^6
+10^180  millhexacontakainillion   1e+6#19  10^^19^6
+10^210  millheptacontakainillion  1e+6#22  10^^22^6
+10^240  milloctacontakainillion   1e+6#25  10^^25^6
+10^270  millnonacontakainillion   1e+6#28  10^^28^6
+10^300  millhectanillion          1e+6#31  10^^31^6
+======  ========================  =======  ========
+
+
+      One Millhectanillion to One Millkilonillion
+
+=======  ========================  ========  =========
+I(n)     Suffix                    e(#)      Powers
+=======  ========================  ========  =========
+10^300   millhectanillion          1e+6#31   10^^31^6
+10^600   milldihectanillion        1e+6#61   10^^61^6
+10^900   milltrihectakainillion    1e+6#91   10^^91^6
+10^1200  milltetrahectakainillion  1e+6#121  10^^121^6
+10^1500  millpentahectakainillion  1e+6#151  10^^151^6
+10^1800  millhexahectakainillion   1e+6#181  10^^181^6
+10^2100  millheptahectakainillion  1e+6#211  10^^211^6
+10^2400  milloctahectakainillion   1e+6#241  10^^241^6
+10^2700  millnonahectakainillion   1e+6#271  10^^271^6
+10^3000  millkilonillion           1e+6#301  10^^301^6
+=======  ========================  ========  =========
 
 -Long Scale Tables-
 
@@ -406,203 +394,216 @@ e+ notates a power of 10
 e# describes a tetration of 10 (as hyper e notation)
 
 
-      One Million to One Vigintilion
+      One Million to One Vigintillion
 
-======  ================  ======  ========
-  I(n)  Suffix              e(#)  Powers
-======  ================  ======  ========
-     1  million           1e+06   10^6
-     2  billion           1e+12   10^12
-     3  trillion          1e+18   10^18
-     4  quadrillion       1e+24   10^24
-     5  quintillion       1e+30   10^30
-     6  sextillion        1e+36   10^36
-     7  septillion        1e+42   10^42
-     8  octillion         1e+48   10^48
-     9  nonillion         1e+54   10^54
-    10  decilion          1e+60   10^60
-    11  undecilion        1e+66   10^66
-    12  duodecilion       1e+72   10^72
-    13  tredecilion       1e+78   10^78
-    14  quattuordecilion  1e+84   10^84
-    15  quindecilion      1e+90   10^90
-    16  sedecilion        1e+96   10^96
-    17  septendecilion    1e+102  10^102
-    18  octodecilion      1e+108  10^108
-    19  novendecilion     1e+114  10^114
-    20  vigintilion       1e+120  10^120
-======  ================  ======  ========
-
-
-       One Million to One Centilion
-
-======  ================  ======  ========
-  I(n)  Suffix            e(#)    Powers
-======  ================  ======  ========
-     1  million           1e+6    10^6
-    10  decilion          1e+60   10^60
-    20  vigintilion       1e+120  10^120
-    30  trigintilion      1e+180  10^180
-    40  quadragintilion   1e+240  10^240
-    50  quinquagintilion  1e+300  10^300
-    60  sexagintilion     1e+360  10^360
-    70  septuagintilion   1e+420  10^420
-    80  octogintilion     1e+480  10^480
-    90  nonagintilion     1e+540  10^540
-   100  centilion         1e+600  10^600
-======  ================  ======  ========
+======  =================  ======  ========
+  I(n)  Suffix               e(#)  Powers
+======  =================  ======  ========
+     1  million            1e+06   10^6
+     2  billion            1e+12   10^12
+     3  trillion           1e+18   10^18
+     4  quadrillion        1e+24   10^24
+     5  quintillion        1e+30   10^30
+     6  sextillion         1e+36   10^36
+     7  septillion         1e+42   10^42
+     8  octillion          1e+48   10^48
+     9  nonillion          1e+54   10^54
+    10  decillion          1e+60   10^60
+    11  undecillion        1e+66   10^66
+    12  duodecillion       1e+72   10^72
+    13  tredecillion       1e+78   10^78
+    14  quattuordecillion  1e+84   10^84
+    15  quindecillion      1e+90   10^90
+    16  sedecillion        1e+96   10^96
+    17  septendecillion    1e+102  10^102
+    18  octodecillion      1e+108  10^108
+    19  novendecillion     1e+114  10^114
+    20  vigintillion       1e+120  10^120
+======  =================  ======  ========
 
 
-       One Million to One Milnillion
+       One Million to One Centillion
 
-======  ================  =======  ========
-  I(n)  Suffix            e(#)     Powers
-======  ================  =======  ========
-     1  million           1e+6     10^6
-   100  centilion         1e+600   10^600
-   200  ducentilion       1e+1200  10^1200
-   300  trecentilion      1e+1800  10^1800
-   400  quadringentilion  1e+2400  10^2400
-   500  quingentilion     1e+3000  10^3000
-   600  sescentilion      1e+3600  10^3600
-   700  septingentilion   1e+4200  10^4200
-   800  octingentilion    1e+4800  10^4800
-   900  nongentilion      1e+5400  10^5400
-  1000  milnillion        1e+6000  10^6000
-======  ================  =======  ========
-
-
-      One Milnillion to One Vigintinillion
-
-======  ===================  =========  =========
-  I(n)  Suffix               e(#)       Powers
-======  ===================  =========  =========
-  1000  milnillion           1e+6000    10^6000
-  2000  bilnillion           1e+12000   10^12000
-  3000  trilnillion          1e+18000   10^18000
-  4000  quadrilnillion       1e+24000   10^24000
-  5000  quintilnillion       1e+30000   10^30000
-  6000  sextilnillion        1e+36000   10^36000
-  7000  septilnillion        1e+42000   10^42000
-  8000  octilnillion         1e+48000   10^48000
-  9000  nonilnillion         1e+54000   10^54000
- 10000  decinillion          1e+60000   10^60000
- 11000  undecinillion        1e+66000   10^66000
- 12000  duodecinillion       1e+72000   10^72000
- 13000  tredecinillion       1e+78000   10^78000
- 14000  quattuordecinillion  1e+84000   10^84000
- 15000  quindecinillion      1e+90000   10^90000
- 16000  sedecinillion        1e+96000   10^96000
- 17000  septendecinillion    1e+102000  10^102000
- 18000  octodecinillion      1e+108000  10^108000
- 19000  novendecinillion     1e+114000  10^114000
- 20000  vigintinillion       1e+120000  10^120000
-======  ===================  =========  =========
+======  =================  ======  ========
+  I(n)  Suffix             e(#)    Powers
+======  =================  ======  ========
+     1  million            1e+6    10^6
+    10  decillion          1e+60   10^60
+    20  vigintillion       1e+120  10^120
+    30  trigintillion      1e+180  10^180
+    40  quadragintillion   1e+240  10^240
+    50  quinquagintillion  1e+300  10^300
+    60  sexagintillion     1e+360  10^360
+    70  septuagintillion   1e+420  10^420
+    80  octogintillion     1e+480  10^480
+    90  nonagintillion     1e+540  10^540
+   100  centillion         1e+600  10^600
+======  =================  ======  ========
 
 
-       One Milnillion to One Centinillion
+       One Million to One Millnillion
 
-======  ===================  =========  =========
-  I(n)  Suffix               e(#)       Powers
-======  ===================  =========  =========
-  1000  milnillion           1e+3003    10^3003
- 10000  decinillion          1e+60000   10^60000
- 20000  vigintinillion       1e+120000  10^120000
- 30000  trigintanillion      1e+180000  10^180000
- 40000  quadragintanillion   1e+240000  10^240000
- 50000  quinquagintanillion  1e+300000  10^300000
- 60000  sexagintanillion     1e+360000  10^360000
- 70000  septuagintanillion   1e+420000  10^420000
- 80000  octogintanillion     1e+480000  10^480000
- 90000  nonagintanillion     1e+540000  10^540000
-100000  centinillion         1e+600000  10^600000
-======  ===================  =========  =========
-
-
-        One Milnillion to One Mildinillion
-
-======  ===================  ==========  ==========
-I(n)    Suffix               e(#)        Powers
-======  ===================  ==========  ==========
-1000    milnillion           1e+3003     10^3003
-100000  centinillion         1e+600000   10^600000
-200000  ducentinillion       1e+1200000  10^1200000
-300000  trecentinillion      1e+1800000  10^1800000
-400000  quadringentinillion  1e+2400000  10^2400000
-500000  quingentinillion     1e+3000000  10^3000000
-600000  sescentinillion      1e+3600000  10^3600000
-700000  septingentinillion   1e+4200000  10^4200000
-800000  octingentinillion    1e+4800000  10^4800000
-900000  nongentinillion      1e+5400000  10^5400000
-10^6    mildinillion         1e+6000000  10^6000000
-======  ===================  ==========  ==========
+======  =================  =======  ========
+  I(n)  Suffix             e(#)     Powers
+======  =================  =======  ========
+     1  million            1e+6     10^6
+   100  centillion         1e+600   10^600
+   200  ducentillion       1e+1200  10^1200
+   300  trecentillion      1e+1800  10^1800
+   400  quadringentillion  1e+2400  10^2400
+   500  quingentillion     1e+3000  10^3000
+   600  sescentillion      1e+3600  10^3600
+   700  septingentillion   1e+4200  10^4200
+   800  octingentillion    1e+4800  10^4800
+   900  nongentillion      1e+5400  10^5400
+  1000  millnillion        1e+6000  10^6000
+======  =================  =======  ========
 
 
-             One Milnillion to One Milicosanillion
+      One Millnillion to One Vigintillnillion
 
-======  ===================  ===============  ================
-I(n)    Suffix               e(#)             Powers
-======  ===================  ===============  ================
-1000    milnillion           1e+6000          10^6000
-10^6    mildinillion         1e+6000000       10^6000000
-10^9    miltrinillion        1e+6000000000    10^6000000000
-10^12   miltetranillion      1e+600#2         10^^2^600
-10^15   milpentanillion      1e+600000#2      10^^2^600000
-10^18   milhexanillion       1e+600000000#2   10^^2^600000000
-10^21   milheptanillion      1e+60#3          10^^3^60
-10^24   miloctanillion       1e+60000#3       10^^3^60000
-10^27   milnonanillion       1e+60000000#3    10^^3^60000000
-10^30   mildekanillion       1e+6#4           10^^4^6
-10^33   milundekanillion     1e+6000#4        10^^4^6000
-10^36   mildodekanillion     1e+6000000#4     10^^4^6000000
-10^39   miltrisdekanillion   1e+6000000000#4  10^^4^6000000000
-10^42   miltetradekanillion  1e+600#5         10^^5^600
-10^45   milpentadekanillion  1e+600000#5      10^^5^600000
-10^48   milhexadekanillion   1e+600000000#5   10^^5^600000000
-10^51   milheptadekanillion  1e+60#6          10^^6^60
-10^54   miloctadekanillion   1e+60000#6       10^^6^60000
-10^57   milnonadekanillion   1e+60000000#6    10^^6^60000000
-10^60   milicosanillion      1e+6#7           10^^7^6
-======  ===================  ===============  ================
-
-
-       One Milnillion to One Milhectanillion
-
-======  =======================  =======  ========
-I(n)    Suffix                   e(#)     Powers
-======  =======================  =======  ========
-1000    milnillion               1e+6000  10^6000
-10^30   mildekanillion           1e+6#4   10^^4^6
-10^60   milicosanillion          1e+6#7   10^^7^6
-10^90   miltricontakainillion    1e+6#10  10^^10^6
-10^120  miltetracontakainillion  1e+6#13  10^^13^6
-10^150  milpentacontakainillion  1e+6#16  10^^16^6
-10^180  milhexacontakainillion   1e+6#19  10^^19^6
-10^210  milheptacontakainillion  1e+6#22  10^^22^6
-10^240  miloctacontakainillion   1e+6#25  10^^25^6
-10^270  milnonacontakainillion   1e+6#28  10^^28^6
-10^300  milhectanillion          1e+6#31  10^^31^6
-======  =======================  =======  ========
+======  =====================  =========  =========
+  I(n)  Suffix                 e(#)       Powers
+======  =====================  =========  =========
+  1000  millnillion            1e+6000    10^6000
+  2000  billnillion            1e+12000   10^12000
+  3000  trillnillion           1e+18000   10^18000
+  4000  quadrillnillion        1e+24000   10^24000
+  5000  quintillnillion        1e+30000   10^30000
+  6000  sextillnillion         1e+36000   10^36000
+  7000  septillnillion         1e+42000   10^42000
+  8000  octillnillion          1e+48000   10^48000
+  9000  nonillnillion          1e+54000   10^54000
+ 10000  decillnillion          1e+60000   10^60000
+ 11000  undecillnillion        1e+66000   10^66000
+ 12000  duodecillnillion       1e+72000   10^72000
+ 13000  tredecillnillion       1e+78000   10^78000
+ 14000  quattuordecillnillion  1e+84000   10^84000
+ 15000  quindecillnillion      1e+90000   10^90000
+ 16000  sedecillnillion        1e+96000   10^96000
+ 17000  septendecillnillion    1e+102000  10^102000
+ 18000  octodecillnillion      1e+108000  10^108000
+ 19000  novendecillnillion     1e+114000  10^114000
+ 20000  vigintillnillion       1e+120000  10^120000
+======  =====================  =========  =========
 
 
-     One Milhectanillion to One Milkillonillion
+       One Millnillion to One Centillnillion
 
-=======  =======================  ========  =========
-I(n)     Suffix                   e(#)      Powers
-=======  =======================  ========  =========
-10^300   milhectanillion          1e+6#31   10^^31^6
-10^600   mildihectanillion        1e+6#61   10^^61^6
-10^900   miltrihectakainillion    1e+6#91   10^^91^6
-10^1200  miltetrahectakainillion  1e+6#121  10^^121^6
-10^1500  milpentahectakainillion  1e+6#151  10^^151^6
-10^1800  milhexahectakainillion   1e+6#181  10^^181^6
-10^2100  milheptahectakainillion  1e+6#211  10^^211^6
-10^2400  miloctahectakainillion   1e+6#241  10^^241^6
-10^2700  milnonahectakainillion   1e+6#271  10^^271^6
-10^3000  milkillonillion          1e+6#301  10^^301^6
-=======  =======================  ========  =========
+======  =====================  =========  =========
+  I(n)  Suffix                 e(#)       Powers
+======  =====================  =========  =========
+  1000  millnillion            1e+3003    10^3003
+ 10000  decillnillion          1e+60000   10^60000
+ 20000  vigintillnillion       1e+120000  10^120000
+ 30000  trigintallnillion      1e+180000  10^180000
+ 40000  quadragintallnillion   1e+240000  10^240000
+ 50000  quinquagintallnillion  1e+300000  10^300000
+ 60000  sexagintallnillion     1e+360000  10^360000
+ 70000  septuagintallnillion   1e+420000  10^420000
+ 80000  octogintallnillion     1e+480000  10^480000
+ 90000  nonagintallnillion     1e+540000  10^540000
+100000  centillnillion         1e+600000  10^600000
+======  =====================  =========  =========
+
+
+        One Millnillion to One Milldinillion
+
+======  =====================  ==========  ==========
+I(n)    Suffix                 e(#)        Powers
+======  =====================  ==========  ==========
+1000    millnillion            1e+3003     10^3003
+100000  centillnillion         1e+600000   10^600000
+200000  ducentillnillion       1e+1200000  10^1200000
+300000  trecentillnillion      1e+1800000  10^1800000
+400000  quadringentillnillion  1e+2400000  10^2400000
+500000  quingentillnillion     1e+3000000  10^3000000
+600000  sescentillnillion      1e+3600000  10^3600000
+700000  septingentillnillion   1e+4200000  10^4200000
+800000  octingentillnillion    1e+4800000  10^4800000
+900000  nongentillnillion      1e+5400000  10^5400000
+10^6    milldinillion          1e+6000000  10^6000000
+======  =====================  ==========  ==========
+
+
+            One Millnillion to One Millicosanillion
+
+======  ====================  ===============  ================
+I(n)    Suffix                e(#)             Powers
+======  ====================  ===============  ================
+1000    millnillion           1e+6000          10^6000
+10^6    milldinillion         1e+6000000       10^6000000
+10^9    milltrisnillion       1e+6000000000    10^6000000000
+10^12   milltetranillion      1e+600#2         10^^2^600
+10^15   millpentanillion      1e+600000#2      10^^2^600000
+10^18   millhexanillion       1e+600000000#2   10^^2^600000000
+10^21   millheptanillion      1e+60#3          10^^3^60
+10^24   milloctanillion       1e+60000#3       10^^3^60000
+10^27   millnonanillion       1e+60000000#3    10^^3^60000000
+10^30   milldekanillion       1e+6#4           10^^4^6
+10^33   millundekanillion     1e+6000#4        10^^4^6000
+10^36   milldodekanillion     1e+6000000#4     10^^4^6000000
+10^39   milltrisdekanillion   1e+6000000000#4  10^^4^6000000000
+10^42   milltetradekanillion  1e+600#5         10^^5^600
+10^45   millpentadekanillion  1e+600000#5      10^^5^600000
+10^48   millhexadekanillion   1e+600000000#5   10^^5^600000000
+10^51   millheptadekanillion  1e+60#6          10^^6^60
+10^54   milloctadekanillion   1e+60000#6       10^^6^60000
+10^57   millnonadekanillion   1e+60000000#6    10^^6^60000000
+10^60   millicosanillion      1e+6#7           10^^7^6
+======  ====================  ===============  ================
+
+
+      One Millnillion to One Millhectanillion
+
+======  ========================  =======  ========
+I(n)    Suffix                    e(#)     Powers
+======  ========================  =======  ========
+1000    millnillion               1e+6000  10^6000
+10^30   milldekanillion           1e+6#4   10^^4^6
+10^60   millicosanillion          1e+6#7   10^^7^6
+10^90   milltricontakainillion    1e+6#10  10^^10^6
+10^120  milltetracontakainillion  1e+6#13  10^^13^6
+10^150  millpentacontakainillion  1e+6#16  10^^16^6
+10^180  millhexacontakainillion   1e+6#19  10^^19^6
+10^210  millheptacontakainillion  1e+6#22  10^^22^6
+10^240  milloctacontakainillion   1e+6#25  10^^25^6
+10^270  millnonacontakainillion   1e+6#28  10^^28^6
+10^300  millhectanillion          1e+6#31  10^^31^6
+======  ========================  =======  ========
+
+
+      One Millhectanillion to One Millkilonillion
+
+=======  ========================  ========  =========
+I(n)     Suffix                    e(#)      Powers
+=======  ========================  ========  =========
+10^300   millhectanillion          1e+6#31   10^^31^6
+10^600   milldihectanillion        1e+6#61   10^^61^6
+10^900   milltrihectakainillion    1e+6#91   10^^91^6
+10^1200  milltetrahectakainillion  1e+6#121  10^^121^6
+10^1500  millpentahectakainillion  1e+6#151  10^^151^6
+10^1800  millhexahectakainillion   1e+6#181  10^^181^6
+10^2100  millheptahectakainillion  1e+6#211  10^^211^6
+10^2400  milloctahectakainillion   1e+6#241  10^^241^6
+10^2700  millnonahectakainillion   1e+6#271  10^^271^6
+10^3000  millkilonillion           1e+6#301  10^^301^6
+=======  ========================  ========  =========
 
 --Changelog--
+
+-1.4-
+
+(Been a year, how time flies...)
+
+Fixed some typos, but that is never done.
+
+"killo" is corrected to "kilo"
+
+Added another to "milnillion" so it is now millnillion. This applies to all derivative numbers as well. This should make long names easier to parse, such that each subsequent "ll" describes one thousand Latin enumerations each.
+
+Also added a maximum of 10^3000 for input (min -10^3000) in order to prevent calculations from taking too long. Python has  been updated to prevent cyberattacks by limiting conversions between strings and integers greater than 4300 digits long. 
+
 
 -v1.3-
 
@@ -650,7 +651,7 @@ Initial release
 
 --Legal--
 
-Cola's Enumeration is by AndrewJ (PixelatedStarfish). Copyright 2024
+Cola's Enumeration is by AndrewJ (PixelatedStarfish). Copyright 2025
 Conway's illion Converter is by Fish. Copyright 2023
 
 MIT License
